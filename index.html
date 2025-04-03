@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Phim</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fde4ea;
+            color: #333;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: pink;
+            padding: 15px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-bar {
+            flex: 1;
+            margin: 0 15px;
+            padding: 8px;
+            border: none;
+            border-radius: 20px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            cursor: pointer;
+        }
+        .login-btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .banner {
+            position: relative;
+            background: url('banner.jpg') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            color: white;
+            padding-left: 50px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .tags span {
+            background: pink;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+        }
+        .categories {
+            text-align: center;
+            padding: 20px;
+        }
+        .category-list span {
+            display: inline-block;
+            background: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .category-list span:hover {
+            background: #ff4081;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🎬 MOVIE</div>
+        <input type="text" placeholder="Tìm kiếm phim, diễn viên..." class="search-bar">
+        <nav>
+            <ul>
+                <li>Phim Bộ</li>
+                <li>Phim Lẻ</li>
+                <li>Thể Loại ▼</li>
+                <li>Quốc Gia ▼</li>
+            </ul>
+        </nav>
+        <button class="login-btn">Đăng Nhập</button>
+    </header>
+    
+    <main>
+        <section class="banner">
+            <div class="overlay"></div>
+            <div class="content">
+                <h1>Khi Cuộc Đời Cho Bạn Quả Quýt</h1>
+                <div class="tags">
+                    <span>Chính kịch</span>
+                    <span>Tình cảm</span>
+                    <span>Tâm lý</span>
+                </div>
+                <p>Ở Jeju, câu chuyện về một cô nàng nhiệt huyết và chàng trai kiên cường...</p>
+            </div>
+        </section>
+        
+        <section class="categories">
+            <h2>Bạn đang quan tâm gì?</h2>
+            <div class="category-list">
+                <span>Hành Động</span>
+                <span>Viễn Tưởng</span>
+                <span>Bí Ẩn</span>
+                <span>Tâm Lý</span>
+                <span>Âm Nhạc</span>
+                <span>Hài Hước</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
