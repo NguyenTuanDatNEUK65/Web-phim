@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fde4ea;
+    color: #333;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: pink;
+    padding: 15px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.search-bar {
+    flex: 1;
+    margin: 0 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+nav ul li {
+    cursor: pointer;
+}
+.login-btn {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.banner {
+    position: relative;
+    background: url('banner.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: white;
+    padding-left: 50px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.tags span {
+    background: pink;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+}
+.categories {
+    text-align: center;
+    padding: 20px;
+}
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.category-list span {
+    display: inline-block;
+    background: pink;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.category-list span:hover {
+    background: #ff4081;
+    color: white;
+}
+.movie-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.movie-list h2 {
+    text-align: left;
+    padding-left: 50px;
+}
+.movies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+.movie {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.movie:hover {
+    transform: scale(1.1);
+}
+.movie img {
+    width: 100%;
+    border-radius: 10px;
+}
+h2{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+@media screen and (max-width: 768px) {
+    /* Header: Stack logo, search bar, nav items */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header .login-btn {
+        width: 100%;
+    }
+
+    /* Banner */
+    .banner {
+        height: 200px;
+        padding-left: 20px;
+    }
+
+    .banner h1 {
+        font-size: 18px;
+    }
+
+    /* Categories */
+    .category-list {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .category-list span {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Movie list */
+    .movies {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .movie {
+        width: 120px;
+        padding: 10px;
+    }
+
+    .movie img {
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+/* Khi màn hình nhỏ hơn 480px */
+@media screen and (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    header .search-bar {
+        padding: 6px;
+    }
+
+    /* Banner */
+    .banner {
+        height: 180px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .banner h1 {
+        font-size: 16px;
+    }
+
+    .category-list span {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* Movie list */
+    .movies {
+        gap: 10px;
+    }
+
+    .movie {
+        width: 100px;
+        padding: 8px;
+    }
+
+    .movie img {
+        height: 120px;
+        object-fit: cover;
+    }
+}

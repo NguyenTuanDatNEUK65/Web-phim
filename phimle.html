@@ -4,101 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phim Lẻ</title>
-    <link rel="stylesheet" >
+    <link rel="stylesheet" href="style.css" >
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <input type="text" placeholder="Tìm kiếm phim, diễn viên">
+        <div class="logo" onclick="loadHomePage()">🎬 MOVIELAND</div>
+        <input type="text" placeholder="Tìm kiếm phim, diễn viên..." class="search-bar">
         <nav>
             <ul>
-                <li><a href="#">Phim Bộ</a></li>
-                <li><a href="#">Phim Lẻ</a></li>
-                <li><a href="#">Thể Loại</a></li>
-                <li><a href="#">Quốc Gia</a></li>
+                <li onclick="loadPage('phimbo.html', 'Phim bộ')">Phim Bộ</li>
+                <li onclick="loadPage('phimle.html', 'Phim lẻ')">Phim Lẻ</li>
+                <li>Thể Loại ▼</li>
+                <li>Quốc Gia ▼</li>
             </ul>
         </nav>
-        <button>Đăng Nhập</button>
+        <button class="login-btn">Đăng Nhập</button>
     </header>
-    <main>
-        <h1>PHIM LẺ</h1>
+
+    <main id="content">
+       
+        <h2>PHIM LẺ</h2>
         <div class="movie-list">
             <div class="movie">
-                <img src="train-to-busan.jpg" alt="Chuyến tàu sinh tử">
+                <img src="https://phimimg.com/upload/vod/20230930-1/ce7f187328a4da4b11aa28e628496b4a.jpg" alt="Chuyến tàu sinh tử">
                 <p>Chuyến tàu sinh tử</p>
             </div>
             <div class="movie">
-                <img src="extreme-job.jpg" alt="Nghề siêu khó">
+                <img src="https://phimimg.com/upload/vod/20240827-1/e6c45927ae175e2d0af5c918880656e7.jpg" alt="Nghề siêu khó">
                 <p>Nghề siêu khó</p>
             </div>
             <div class="movie">
-                <img src="outlaw-1.jpg" alt="Ngoài vòng pháp luật 1">
+                <img src="https://phimimg.com/upload/vod/20250331-1/e6c17caefaaddcfcbdf07cdc3ae488d6.jpg" alt="Ngoài vòng pháp luật 1">
                 <p>Ngoài vòng pháp luật 1</p>
             </div>
             <div class="movie">
-                <img src="outlaw-2.jpg" alt="Ngoài vòng pháp luật 2">
+                <img src="https://phimimg.com/upload/vod/20250331-1/d42ca2f27a4273551e0faad371a932be.jpg" alt="Ngoài vòng pháp luật 2">
                 <p>Ngoài vòng pháp luật 2</p>
             </div>
         </div>
+        
     </main>
 </body>
 </html>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #fbe7eb;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #f8a7b7;
-        padding: 15px;
-    }
-    input[type="text"] {
-        padding: 8px;
-        width: 250px;
-        border-radius: 20px;
-        border: none;
-    }
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
-    nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-    button {
-        background-color: #fff;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 20px;
-        cursor: pointer;
-    }
-    main {
-        text-align: center;
-        padding: 20px;
-    }
-    .movie-list {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-    .movie {
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    .movie img {
-        width: 150px;
-        height: auto;
-        border-radius: 10px;
-    }
-</style>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim Lẻ</title>
+    <link rel="stylesheet" href="style.css" >
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="loadHomePage()">🎬 MOVIELAND</div>
+        <input type="text" placeholder="Tìm kiếm phim, diễn viên..." class="search-bar">
+        <nav>
+            <ul>
+                <li onclick="loadPage('phimbo.html', 'Phim bộ')">Phim Bộ</li>
+                <li onclick="loadPage('phimle.html', 'Phim lẻ')">Phim Lẻ</li>
+                <li>Thể Loại ▼</li>
+                <li>Quốc Gia ▼</li>
+            </ul>
+        </nav>
+        <button class="login-btn">Đăng Nhập</button>
+    </header>
+
+    <main id="content">
+       
+        <h2>PHIM BỘ</h2>
+        <div class="movie-list">
+            <div class="movie">
+                <img src="https://phimimg.com/upload/vod/20230930-1/ce7f187328a4da4b11aa28e628496b4a.jpg" alt="Chuyến tàu sinh tử">
+                <p>Chuyến tàu sinh tử</p>
+            </div>
+            <div class="movie">
+                <img src="https://phimimg.com/upload/vod/20240827-1/e6c45927ae175e2d0af5c918880656e7.jpg" alt="Nghề siêu khó">
+                <p>Nghề siêu khó</p>
+            </div>
+            <div class="movie">
+                <img src="https://phimimg.com/upload/vod/20250331-1/e6c17caefaaddcfcbdf07cdc3ae488d6.jpg" alt="Ngoài vòng pháp luật 1">
+                <p>Ngoài vòng pháp luật 1</p>
+            </div>
+            <div class="movie">
+                <img src="https://phimimg.com/upload/vod/20250331-1/d42ca2f27a4273551e0faad371a932be.jpg" alt="Ngoài vòng pháp luật 2">
+                <p>Ngoài vòng pháp luật 2</p>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>
+

@@ -3,106 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Phim</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fde4ea;
-            color: #333;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: pink;
-            padding: 15px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .search-bar {
-            flex: 1;
-            margin: 0 15px;
-            padding: 8px;
-            border: none;
-            border-radius: 20px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-        }
-        nav ul li {
-            cursor: pointer;
-        }
-        .login-btn {
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-        .banner {
-            position: relative;
-            background: url('banner.jpg') center/cover no-repeat;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            text-align: left;
-            color: white;
-            padding-left: 50px;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-        }
-        .tags span {
-            background: pink;
-            padding: 5px 10px;
-            border-radius: 15px;
-            margin: 5px;
-        }
-        .categories {
-            text-align: center;
-            padding: 20px;
-        }
-        .category-list span {
-            display: inline-block;
-            background: white;
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .category-list span:hover {
-            background: #ff4081;
-            color: white;
-        }
-    </style>
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo">🎬 MOVIE</div>
+        <div class="logo" onclick="loadHomePage()">🎬 MOVIELAND</div>
         <input type="text" placeholder="Tìm kiếm phim, diễn viên..." class="search-bar">
         <nav>
             <ul>
-                <li>Phim Bộ</li>
-                <li>Phim Lẻ</li>
+                <li onclick="loadPage('phimbo.html', 'Phim bộ')">Phim Bộ</li>
+                <li onclick="loadPage('phimle.html', 'Phim lẻ')">Phim Lẻ</li>
                 <li>Thể Loại ▼</li>
                 <li>Quốc Gia ▼</li>
             </ul>
@@ -110,7 +22,7 @@
         <button class="login-btn">Đăng Nhập</button>
     </header>
     
-    <main>
+    <main id="content">
         <section class="banner">
             <div class="overlay"></div>
             <div class="content">
@@ -123,7 +35,6 @@
                 <p>Ở Jeju, câu chuyện về một cô nàng nhiệt huyết và chàng trai kiên cường...</p>
             </div>
         </section>
-        
         <section class="categories">
             <h2>Bạn đang quan tâm gì?</h2>
             <div class="category-list">
@@ -133,6 +44,34 @@
                 <span>Tâm Lý</span>
                 <span>Âm Nhạc</span>
                 <span>Hài Hước</span>
+                <span>Khoa Học</span>
+                <span>Kinh Điển</span>
+                <span>Cổ Trang</span>
+                <span>Kinh Dị</span>
+                <span>Phim 18+</span>
+                <span>Thể Thao</span>
+                <span>Gia Đình</span>
+                <span>Hình Sự</span>
+                <span>Thần Thoại</span>
+                <span>Chiến Tranh</span>
+                <span>Tài Liệu</span>
+                <span>Tình Cảm</span>
+                <span>Phiêu Lưu</span>
+                <span>Học Đường</span>
+                <span>Võ Thuật</span>
+                <span>Chính Kịch</span>
+            </div>
+        </section>
+
+        <section class="movie-list">
+            <h2>All Videos</h2>
+            <div class="movies">
+                <div class="movie"><img src="movie1.jpg" alt="Movie 1"><p>Khi cuộc đời cho bạn quả quýt</p></div>
+                <div class="movie"><img src="movie2.jpg" alt="Movie 2"><p>Nghề siêu khó</p></div>
+                <div class="movie"><img src="movie3.jpg" alt="Movie 3"><p>Nghề siêu khó nói</p></div>
+                <div class="movie"><img src="movie4.jpg" alt="Movie 4"><p>Ngoài vòng pháp luật 2</p></div>
+                <div class="movie"><img src="movie5.jpg" alt="Movie 5"><p>Niệm vô song</p></div>
+                <div class="movie"><img src="movie6.jpg" alt="Movie 6"><p>Chúng ta của sau này</p></div>
             </div>
         </section>
     </main>
